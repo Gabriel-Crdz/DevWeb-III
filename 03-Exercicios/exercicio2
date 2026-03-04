@@ -35,5 +35,11 @@ public class Requisicoes {
    	String nome = request.getParameter("nome");
    	return "Olá, " + nome;
    }
+
+   @GetMapping("/bebidas/{type}")
+   @ResponseBody
+   public String bebidas(@PathVariable String type){
+      return "A categoria da bebida é: " + type;
+   }
    
 }
