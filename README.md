@@ -5,6 +5,8 @@
 * ***HORA AULA:*** 80h
 * ***HORA RELOGIO:*** 67h
 
+* **Tecnologias: Java, Spring Framework**
+
 ### Objetivo:
 Aprofundar os conceitos de desenvolvimento de sistemas web utilizando uma
 linguagem de programação para a construção de páginas dinâmicas com
