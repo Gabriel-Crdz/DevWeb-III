@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario de Edição</h1>
+
+     <div class="cadastrar">
+        <form th:action="@{/atualizar}" method="post"> <!---Rota Dinamica(@)--->
+            <input type="text" name="tarefa" th:value="${tarefa.tarefa}"> <!--- Preenche o campo com o valor da tarefa --->
+            <br> <!--Quebra de linha-->
+            <input type="data" name="dataLimite" th:value="${tarefa.dataLimite}">
+            <button type="submit">atualizar</button>
+        </form>
+
+    </div>
+</body>
+</html>

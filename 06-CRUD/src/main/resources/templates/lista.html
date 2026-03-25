@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <div class="cadastrar">
+        <form th:action="@{/add}" method="post"> <!---Rota Dinamica(@)--->
+            <input type="text" name="tarefa">
+            <br> <!--Quebra de linha-->
+            <input type="data" name="dataLimite">
+
+
+            <button type="submit">novo</button>
+        </form>
+
+    </div>
+
+    <ul>
+        <li th:each="tarefa : ${lista}">
+            <span th:text="${tarefa.id}" ></span>
+            <span th:text="${tarefa.tarefa}" ></span> <!--- Contração de tarefa.getTarefa()-->
+            <span th:text="${tarefa.estado.descricao}" ></span>
+            <span th:text="${tarefa.dataLimite}" ></span>
+            
+            <a href="@/alterar/{id} (id = ${tarefa.id})">alterar</a>
+            <a th:href="@{/apagar/{id} (id = ${tarefa.id})}">remover</a>
+        </li>
+    </ul>
+    
+</body>
+</html>
