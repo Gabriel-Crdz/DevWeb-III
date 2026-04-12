@@ -5,11 +5,11 @@ import java.util.UUID;
 
 import com.example.todolist.enums.EstadoTarefa;
 
-@Component // Identifica como componente da aplicação
+// @Component // Identifica como componente da aplicação
 public class Tarefa {
     private UUID id;
     private String tarefa;
-    private String estado;
+    private EstadoTarefa estado;
     private LocalDate dataLimite;
 
     public Tarefa(String tarefa, LocalDate dataLimite){
@@ -34,10 +34,10 @@ public class Tarefa {
         this.tarefa = tarefa;
     }
 
-    public String getEstado() {
+    public EstadoTarefa getEstado() {
         return estado;
     }   
-    public void setEstado(String estado) {
+    public void setEstado(EstadoTarefa estado) {
         this.estado = estado;
     }
 

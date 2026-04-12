@@ -28,7 +28,7 @@
             <span th:text="${tarefa.estado.descricao}" ></span>
             <span th:text="${tarefa.dataLimite}" ></span>
             
-            <a href="@/alterar/{id} (id = ${tarefa.id})">alterar</a>
+            <a th:href="@{/alterar/{id} (id = ${tarefa.id})}">alterar</a>
             <a th:href="@{/apagar/{id} (id = ${tarefa.id})}">remover</a>
         </li>
     </ul>
