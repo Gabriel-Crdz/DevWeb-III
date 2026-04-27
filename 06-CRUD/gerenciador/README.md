@@ -70,7 +70,7 @@ O objetivo da página tarefa-lista.html é apresentar todas as tarefas em uma
 tabela HTML. Para cada tarefa, será exibido o título, descrição, botão de editar e de
 excluir.
 
-![listagem de tarefas](/img/lista.png)
+![listagem de tarefas](./img/lista.png)
 
 ## 6. Cadastrando uma Tarefa
 Para realizar o cadastro de tarefas vamos criar e expor outro método na classe
@@ -80,7 +80,7 @@ permita chamar o formulário de cadastro de tarefas; ii) a segunda etapa é
 implementar outro método para receber os dados vindos do formulário de cadastro
 de tarefas.
 
-![cadastro de tarefas](/img/cadastro.png)
+![cadastro de tarefas](./img/cadastro.png)
 
 ---
 
@@ -89,33 +89,33 @@ de tarefas.
 Aqui tive que implementar uma camada util para fazer um sequenciador de id, 
 por ter usado o tipo Long no atributo id
 
-![codigo salvar](/img/salvar.png)
+![codigo salvar](./img/salvar.png)
 
 ### 8. Implemente as funcionalidades para edição e exclusão de tarefas;
 
-![codigo edição e exclusão](/img/edição-exclusão.png)
+![codigo edição e exclusão](./img/edição-exclusão.png)
 
-![exemplo de edição](/img/edição.png)
+![exemplo de edição](./img/edição.png)
 
 ### 9. Adicione um novo atributo que permita informar o status de um tarefas (em andamento, concluído ou cancelado).
 Utilize uma enumeração.
 * 9.1. No momento da criação de tarefas, o estado deve ser “em andamento”;
 * 9.2. No formulário de edição, permita a alteração também do estado;.
 
-![codigo enum](/img/enum.png)
+![codigo enum](./img/enum.png)
 
 ### 10. Crie uma página que exiba todas as informações de uma tarefa incluindo a descrição. 
 Na tabela que lista as tarefas, faça com que o nome da tarefa seja
 um link para essa página.
 
-![exemplo de exibição](/img/info.png)
+![exemplo de exibição](./img/info.png)
 
 ### 11. Crie uma rota que permita a exibição apenas das tarefas em andamento.
 
-![exemplo de em andamento](/img/em-andamento.png)
+![exemplo de em andamento](./img/em-andamento.png)
 
 ### 12. Na página de listagem de Tarefas, 
 crie um link que aponte para a rota de
 cadastro de tarefas. Utilize a diretivas @{} para criação dos links.
 
-![listagem com links](/img/listagem.png)
+![listagem com links](./img/listagem.png)
