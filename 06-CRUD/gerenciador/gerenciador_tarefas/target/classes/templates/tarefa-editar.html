@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-size: 1.5rem;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+        label{
+            width: 60px;
+        }
+        input, select{
+            margin-left: 60px;
+        }
+    </style>
+    <title>Edição de Tarefas</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form th:action="@{/tarefas/atualizar}" method="post" class="form">
+            <input type="hidden" name="id" th:value="${id}">
+
+            <div class="mb-3">
+                <label for="">Titulo</label>
+                <input type="text" name="titulo" th:value="${tarefa.titulo}">
+            </div>
+
+            <div class="mb-3">
+                <label for="">Descrição</label>
+                <input type="text" name="descricao" th:value="${tarefa.descricao}">
+            </div>
+
+            <div class="mb-3">
+                <label for="">Data</label>
+                <input type="date" name="data" th:value="${tarefa.data}">
+            </div>
+
+            <div class="mb-3">
+                <label for="">Estado</label>
+                <select name="estado">
+                    <option th:each="e : ${estados}" th:value="${e}" th:text="${e.descricao}"
+                        th:selected="${e == tarefa.estado}">
+                    </option>
+                </select>
+            </div>
+            <div>
+                <input class="btn btn-secondary border border-dark" type="submit" value="Atualizar">
+                <a th:href="@{/tarefas}" class="btn btn-secondary border border-dark">Voltar</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
