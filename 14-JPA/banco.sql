@@ -8,10 +8,14 @@ CREATE DATABASE jpa_aula;
 use jpa_aula;
 
 CREATE TABLE livro(
-    id BIGINT NOT NULL AUTO_INCREMENT,
+    id BIGINT AUTO_INCREMENT,
     titulo VARCHAR(80) NOT NULL,
-    autor VARCHAR(80) NOT NULL,
-    disponivel BOOLEAN NOT NULL,
-    isbn VARCHAR(13) NOT NULL,
+    autor VARCHAR,
+    disponivel BOOLEAN,
+    isbn VARCHAR(13) UNIQUE NOT NULL,
+    status VARCHAR,
+    dataCadastro TIMESTAMP,
+    ultimaAtualizacao TIMESTAMP,
+    versao INTEGER 
     PRIMARY KEY(id)
 );
